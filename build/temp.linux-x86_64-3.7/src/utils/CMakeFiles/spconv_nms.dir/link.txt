@@ -1,2 +1,0 @@
-/usr/bin/ar qc libspconv_nms.a CMakeFiles/spconv_nms.dir/nms.cu.o
-/usr/bin/ranlib libspconv_nms.a

@@ -75,9 +75,9 @@ class CMakeBuild(build_ext):
         #link_file = 'build/temp.linux-x86_64-3.7/src/spconv/CMakeFiles/spconv.dir/link.txt'
         #dlink = 'build/temp.linux-x86_64-3.7/src/spconv/CMakeFiles/spconv.dir/dlink.txt'
 	
-	build_make_file = 'build/temp.linux-x86_64-cpython-37/src/spconv/CMakeFiles/spconv.dir/build.make'
-	link_file = 'build/temp.linux-x86_64-cpython-37/src/spconv/CMakeFiles/spconv.dir/link.txt'
-	dlink = 'build/temp.linux-x86_64-cpython-37/src/spconv/CMakeFiles/spconv.dir/dlink.txt'
+        build_make_file = 'build/temp.linux-x86_64-cpython-37/src/spconv/CMakeFiles/spconv.dir/build.make'
+        link_file = 'build/temp.linux-x86_64-cpython-37/src/spconv/CMakeFiles/spconv.dir/link.txt'
+        dlink = 'build/temp.linux-x86_64-cpython-37/src/spconv/CMakeFiles/spconv.dir/dlink.txt'
         for file in [build_make_file, link_file]:
             with open(file) as f:
                 newText = f.read().replace('/usr/local/cuda', env['CUDA_HOME'])
