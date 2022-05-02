@@ -1,0 +1,115 @@
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: /usr/local/cuda-10.1/bin/nvcc 
+Build flags: "--expt-relaxed-constexpr"
+Id flags: --keep;--keep-dir;tmp -v
+
+The output was:
+1
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/usr/local/cuda-10.1/bin
+#$ _THERE_=/usr/local/cuda-10.1/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_DIR_=targets/x86_64-linux
+#$ TOP=/usr/local/cuda-10.1/bin/..
+#$ NVVMIR_LIBRARY_DIR=/usr/local/cuda-10.1/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/usr/local/cuda-10.1/bin/../lib:/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.1/lib64:/usr/local/cuda/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/opt/amazon/efa/lib:/opt/amazon/openmpi/lib:/usr/local/lib:/usr/lib:
+#$ PATH=/usr/local/cuda-10.1/bin/../nvvm/bin:/usr/local/cuda-10.1/bin:/usr/local/cuda-10.1/bin:/home/ubuntu/anaconda3/envs/py37/bin:/home/ubuntu/anaconda3/condabin:/usr/local/cuda-10.1/bin:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/home/ubuntu/anaconda3/condabin:/home/ubuntu/.dl_binaries/bin:/usr/local/cuda/bin:/opt/aws/neuron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+#$ INCLUDES="-I/usr/local/cuda-10.1/bin/../targets/x86_64-linux/include"  
+#$ LIBRARIES=  "-L/usr/local/cuda-10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-10.1/bin/../targets/x86_64-linux/lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+nvcc fatal   : Don't know what to do with '"--expt-relaxed-constexpr"'
+
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: /usr/local/cuda-10.1/bin/nvcc 
+Build flags: "--expt-relaxed-constexpr"
+Id flags:  -v
+
+The output was:
+1
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/usr/local/cuda-10.1/bin
+#$ _THERE_=/usr/local/cuda-10.1/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_DIR_=targets/x86_64-linux
+#$ TOP=/usr/local/cuda-10.1/bin/..
+#$ NVVMIR_LIBRARY_DIR=/usr/local/cuda-10.1/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/usr/local/cuda-10.1/bin/../lib:/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.1/lib64:/usr/local/cuda/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/opt/amazon/efa/lib:/opt/amazon/openmpi/lib:/usr/local/lib:/usr/lib:
+#$ PATH=/usr/local/cuda-10.1/bin/../nvvm/bin:/usr/local/cuda-10.1/bin:/usr/local/cuda-10.1/bin:/home/ubuntu/anaconda3/envs/py37/bin:/home/ubuntu/anaconda3/condabin:/usr/local/cuda-10.1/bin:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/home/ubuntu/anaconda3/condabin:/home/ubuntu/.dl_binaries/bin:/usr/local/cuda/bin:/opt/aws/neuron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+#$ INCLUDES="-I/usr/local/cuda-10.1/bin/../targets/x86_64-linux/include"  
+#$ LIBRARIES=  "-L/usr/local/cuda-10.1/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda-10.1/bin/../targets/x86_64-linux/lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+nvcc fatal   : Don't know what to do with '"--expt-relaxed-constexpr"'
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/ubuntu/Workspace/Core/spconv/build/temp.linux-x86_64-3.7/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_23152/fast && /usr/bin/make  -f CMakeFiles/cmTC_23152.dir/build.make CMakeFiles/cmTC_23152.dir/build
+make[1]: Entering directory '/home/ubuntu/Workspace/Core/spconv/build/temp.linux-x86_64-3.7/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_23152.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -DVERSION_INFO=\"1.0\"  -o CMakeFiles/cmTC_23152.dir/src.cxx.o -c /home/ubuntu/Workspace/Core/spconv/build/temp.linux-x86_64-3.7/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_23152
+/home/ubuntu/anaconda3/envs/py37/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23152.dir/link.txt --verbose=1
+/usr/bin/c++ -DVERSION_INFO=\"1.0\"  CMakeFiles/cmTC_23152.dir/src.cxx.o -o cmTC_23152 
+CMakeFiles/cmTC_23152.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_23152.dir/build.make:105: recipe for target 'cmTC_23152' failed
+make[1]: *** [cmTC_23152] Error 1
+make[1]: Leaving directory '/home/ubuntu/Workspace/Core/spconv/build/temp.linux-x86_64-3.7/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_23152/fast' failed
+make: *** [cmTC_23152/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/Workspace/Core/spconv/build/temp.linux-x86_64-3.7/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d1a61/fast && /usr/bin/make  -f CMakeFiles/cmTC_d1a61.dir/build.make CMakeFiles/cmTC_d1a61.dir/build
+make[1]: Entering directory '/home/ubuntu/Workspace/Core/spconv/build/temp.linux-x86_64-3.7/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d1a61.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DVERSION_INFO=\"1.0\" -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_d1a61.dir/CheckFunctionExists.cxx.o -c /home/ubuntu/Workspace/Core/spconv/build/temp.linux-x86_64-3.7/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_d1a61
+/home/ubuntu/anaconda3/envs/py37/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1a61.dir/link.txt --verbose=1
+/usr/bin/c++ -DVERSION_INFO=\"1.0\" -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_d1a61.dir/CheckFunctionExists.cxx.o -o cmTC_d1a61  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d1a61.dir/build.make:105: recipe for target 'cmTC_d1a61' failed
+make[1]: *** [cmTC_d1a61] Error 1
+make[1]: Leaving directory '/home/ubuntu/Workspace/Core/spconv/build/temp.linux-x86_64-3.7/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_d1a61/fast' failed
+make: *** [cmTC_d1a61/fast] Error 2
+
+
+
